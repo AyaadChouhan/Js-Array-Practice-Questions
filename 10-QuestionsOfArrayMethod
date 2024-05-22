@@ -1,0 +1,85 @@
+// Q1) Array Filtering: Write a function that takes an array of numbers and returns a new array containing only the even numbers.
+function findEven(arr) {
+  const newArr = [];
+  arr.filter((value) => {
+    if (value % 2 === 1) {
+      newArr.push(value);
+    }
+  });
+  return newArr;
+}
+console.log(findEven([1, 2, 3, 4, 45, 656, 232]));
+
+// Q2) Array Mapping: Create a function that takes an array of strings and returns a new array with all strings converted to uppercase.
+function makeUpeerCase(arr) {
+  const newArr = arr.map((value, index) => {
+    return value.toUpperCase();
+  });
+  return newArr;
+}
+console.log(makeUpeerCase(["a", "b", "c", "d", "e"]));
+
+// Q3) Array Reduction: Write a function that calculates the sum of all numbers in an array.
+function reduction(arr) {
+  const data = arr.reduce((acc, value) => {
+    return (acc += value);
+  });
+  return data;
+}
+console.log(reduction([1, 2, 3, 4, 5, 6]));
+
+// Q4) Finding an Element: Write a function that takes an array of numbers and a number as arguments, and returns true if the number is present in the array, and false otherwise.
+function containsNumber(arr, num) {
+  if (arr.includes(num)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(containsNumber([1, 2, 3, 4, 5], 1));
+
+// Q5) Array Sorting: Create a function that takes an array of strings and returns a new array with the strings sorted alphabetically.
+function sortStrings(arr) {
+  return arr.sort();
+}
+console.log(sortStrings(["s", "d", "e", "a", "c", "d", "b"]));
+
+// Q6) Array Reversing: Write a function that takes an array and returns a new array with the elements in reverse order.
+function reverseArray(arr) {
+  return arr.reverse();
+}
+// console.log(reverseArray([1, 2, 3, 4, 5]));
+
+// Q7) Removing Duplicates: Create a function that takes an array and returns a new array with duplicate elements removed.
+function removeDuplicates(arr) {
+  const removeDupli = new Set(arr);
+  return removeDupli;
+}
+// console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 6]));
+
+// Q8) Flattening an Array: Write a function that takes a nested array (an array of arrays) and returns a single flattened array.
+function flattenArray(arr) {
+  return arr.flat();
+}
+// console.log(flattenArray([1,2,3,[4,5,6],7,8,9,10]))
+
+// Q9) Finding the Largest Number: Write a function that takes an array of numbers and returns the largest number.
+function findLargestNumber(arr) {
+  return Math.max(...arr);
+}
+// console.log(findLargestNumber([1, 2, 3, 3, 4, 5, 6]));
+
+// Q10) Array Transformation: Create a function that takes an array of numbers and returns a new array where each element is squared.
+function squareNumbers(arr) {
+  let data = arr.map((value) => {
+    return Math.pow(value, 2);
+  });
+  return data;
+}
+// function squareNumbers(arr) {
+//   let data = arr.map((value) => {
+//     return value * value;
+//   });
+//   return data;
+// }
+console.log(squareNumbers([1, 2, 3, 3, 4, 5, 6]));
